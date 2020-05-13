@@ -6,7 +6,6 @@ const path = require('path')
 const productsJSON = JSON.parse(fs.readFileSync(path.join(__dirname,'../data/productsDataBase.json')), 'utf-8');
 let ofertas = productsJSON.filter(function(product){
     return product.category == 'in-sale'});
-// let imagenes =path.join(__dirname,"/public/images/",product.image)
 let ultimosvistos = productsJSON.filter(function(product){
     return product.category == 'visited'});
     
